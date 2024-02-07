@@ -1,0 +1,30 @@
+media = 0
+cont = 0
+dias_superior_media = 0
+
+for i in dados:
+    
+    if i['valor'] > maior:
+        maior = i['valor']
+        dia_maior = i['dia']
+        
+    
+    elif i['valor'] < menor and i['valor'] != 0:
+        menor = i['valor']
+        dia_menor = i['dia']
+   
+   
+    if i['valor'] != 0:
+        media += i['valor']
+        cont += 1
+    media = media/cont
+    
+    
+    if i['valor'] > media:
+        dias_superior_media+= 1 
+
+
+print(f'A media mensal foi de R$ {media:.2f}')   
+print(f'A quantidade de dias com valor superior a media foi de {dias_superior_media} dias')
+print(f'O valor maximo foi: R$ {maior:.2f} no dia {dia_maior}')
+print(f'O valor minimo foi: R$ {menor:.2f} no dia {dia_menor}')
